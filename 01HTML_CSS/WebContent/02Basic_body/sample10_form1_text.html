@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form 태그 실습</title>
+	</head>
+	<body>
+	
+		<form action="test/target.html" method = "get">
+		<!-- 전송방식 get: 데이터를 key=value로 url 이용 전송 -->
+		<!-- 전송방식 post: jsp, servlet요청, Request객체의 body부분에 숨겨져서 전송 -->
+		<!-- method의 기본값은 get방식 -->
+		
+		아이디: <input type="text" value="홍길동" name="userid"><br> <!-- 받는 쪽에서는 name을 기준으로 받아서 사용 -->
+		이름: <input type="text" value="홍길동" name="username"><br>
+		비밀번호: <input type="password" name="userpass"><br>
+		
+		<!-- 폼에 묶인 전송버튼을 클릭시 target에 저장된 파일로 데이터를 name=사용자 입력한 값으로 -->
+		<!-- 전송방식 get: 데이터를 key=value로 url 이용 전송 -->
+		<!-- 전송방식 post: jsp, servlet요청, Request객체의 body부분에 숨겨져서 전송 -->
+		<input type="submit" value="전송">
+		</form>
+		
+	</body>
+</html>
