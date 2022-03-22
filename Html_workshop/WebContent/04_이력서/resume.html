@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>지원서 작성</title>
+		<style type="text/css">
+			span{
+				color: blue;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="target.html" name="myForm" method="get">
+			<b>지원서 작성</b>
+			<hr/>
+			<span>기본지원사항</span>
+			<table border="1">
+				<tr>
+					<th>응시분야</th>
+					<td> 
+						<select name="part">
+							<option value="Consulting" selected="selected">Consulting</option>
+							<option value="IoT">IoT</option>
+							<option value="Big_Data">빅데이터</option>
+							<option value="R&D">R</option>
+						</select>
+						<select name="part2">
+							<option value="freshman" >신입</option>
+							<option value="experienced">경력</option>
+							<option value="Staff"selected="selected">Staff</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>졸업여부</th>
+					<td>
+						<input type="radio" name="Is_Graduated" value="Graduated" checked>졸업
+						<input type="radio" name="Is_Graduated" value="expected_to_graduate">졸업예정
+					</td>
+				</tr>
+			</table>
+			
+			<span>기본인적사항</span>
+			<table border="1">
+				<tr>
+					<th>성명</th>
+					<td><input type="text" name="username"></td>
+					<td>국적<input type="text" name="userNationality"></td>
+				</tr>
+				<tr>
+					<th>영문이름</th>
+					<td>성<input type="text" name="lastname"></td>
+					<td>이름<input type="text" name="firstname"></td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+					<td colspan="2">
+						<input type="text" name="email_id">@<input type="text" name="email_site">
+					</td>
+				</tr>
+				<tr>
+					<th>휴대전화</th>
+					<td colspan="2">
+						<input type="text" name="phone_first" maxlength="3" size="4"> - 
+						<input type="text" name="phone_mid" maxlength="4" size="4"> - 
+						<input type="text" name="phone_last" maxlength="4" size="4">
+					</td>
+				</tr>
+			</table>
+			
+			<span>어학사항</span>
+			<table border="1">
+				<tr>
+					<th>어학구분</th>
+					<td>
+						<select name="어학">
+							<option value="English">영어</option>
+							<option value="Chinese">중국어</option>
+							<option value="French" selected="selected">불어</option>
+							<option value="Japanese">일본어</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>어학시험명</th>
+					<td><input type="text" name="어학시험명"></td>
+				</tr>
+				
+				<tr>
+					<th>점수/등급</th>
+					<td><input type="text" name="점수">/<input type="text" name="등급"></td>
+				</tr>
+			</table>
+			
+			<br>
+			<input type="submit" value="지원하기">
+			<input type="reset" value="다시작성하기">
+		</form>
+	</body>
+</html>
