@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			console.log("1");
+			
+			function aaa() {	// 일반적 이름있는 함수 - 호출 사용
+				console.log("2");	
+			}
+			console.log("3");
+			
+			aaa();	// 호출
+			
+			function bbb(name) {	// 매개변수 1개
+				console.log("in bbb() : " + name);	
+			}
+			
+			bbb("홍길동");
+			
+			function ccc(n1, n2) {	// 매개변수 1개
+				console.log("in ccc() :", n1, ":", n2);	
+			}
+			
+			ccc("홍길동", "이순신");
+			ccc("홍길동");	// 매개변수 1개만 넘겨도 오류가 발생하지 않음
+			
+			function ddd() {	// 매개변수 1개
+				var num = 100;
+				return num;
+			}
+			
+			var num2 = ddd();
+			console.log(num2);
+			
+			function eee(n1, n2) {	// 매개변수 1개
+				return n1 + n2;
+			}
+			
+			var num3 = eee(10, 20);
+			console.log(num3);
+			
+			function fff(n) {	// 매개변수 1개
+				console.log(n);
+			}
+			
+			fff([10, 20, 30]);
+			
+			function ggg() {	// 매개변수 1개
+				var num = [1, 2, 3];
+				return num;
+			}
+			
+			console.log(ggg());
+		</script>
+	</head>
+	<body>
+	
+	
+	</body>
+</html>
