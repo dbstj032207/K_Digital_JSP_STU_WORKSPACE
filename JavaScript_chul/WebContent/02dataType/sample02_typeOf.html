@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dataType</title>	
+		<script type="text/javascript">
+
+			// 변수 선언
+			var name = "홍길동";
+			var age = 20;
+			var array = [1, 2, 3, 4]; 	// 배열 array
+			var obj = { "username": "이순신", "age": 44} 	// Json 객체 {key:value, key:value}
+			var result = true; 	// boolean
+			var xxx; 	// undefined
+			var kkk = null;	// null
+			var zzz = function() {}; 	// 함수 객체 function
+			var xyz = parseInt("123"); 	// number 123
+			
+			
+			console.log( typeof name ); // string
+			console.log( typeof age ); 	// number
+			console.log( typeof array ); 	// object
+			//////////////////////////////////////////////////
+			console.log( typeof obj );	// object
+			console.log( typeof result );	// boolean
+			console.log( typeof xxx );	// undefined
+			console.log( typeof kkk );	// object
+			console.log( typeof zzz );	// function
+			console.log( typeof xyz );	// number
+			
+			/////////////////////////////////////////////////////
+			console.log( typeof name == 'string');	// true 
+			console.log( typeof age == 'number');	// true
+			console.log( typeof array == 'object');	// true
+			
+			// java에서 equals사용 javascript == 사용
+			var test = "aaa";
+			console.log(test == 'aaa'); 	// true
+			
+			
+		</script>
+	</head>
+		<body>
+			<p>hello</p>
+			
+		</body>
+</html>

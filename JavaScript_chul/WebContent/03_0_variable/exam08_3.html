@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>variable</title>	
+		<script type="text/javascript">
+			
+			// 함수 형식 function 함수이름(매개변수){} 접근제한자, 리턴타입 없음
+			function outputNumbers(count) {
+				for (var i = 0; i < count; i++) {
+					console.log(i);
+				}
+				console.log("i>>", i)	// 함수 범위 변수
+			}
+			
+			outputNumbers(5);	// 함수 호출하여 함수 사용
+			console.log(i);	// i 사용불가
+			
+		</script>
+	</head>
+		<body>
+			<p>hello</p>
+			
+		</body>
+</html>

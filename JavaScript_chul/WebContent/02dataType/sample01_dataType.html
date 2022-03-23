@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dataType</title>	
+		<script type="text/javascript">
+			
+			// 0. 변수는 타입 선언 없이 var 사용, 실제 값에 따라 타입이 동적으로 묵시적 변환
+			var test;	// 변수 선언
+			console.log(test)	// undefined
+			test = 10;
+			console.log(test) 	// 10
+			test = '홍길동';
+			console.log(test) 	// 홍길동
+			
+			// 변수 선언과 동시에 초기화 - 타입선언 필요없음 var로 선언
+			var name = "홍길동";
+			var age = 20;
+			var array = [1, 2, 3, 4]; 	// 배열 array
+			var obj = { "username": "이순신", "age": 44} 	// Json 객체 {key:value, key:value}
+			var result = true; 	// boolean
+			var xxx; 	// undefined
+			var kkk = null;	// null
+			var zzz = function() {}; 	// 함수 객체 (변수에 함수를 저장 가능)
+			//////////////////////////////////////////////
+			//NaN (Not a Number)
+			var xyz = parseInt("123"); 	// 자바에서 Integer.parseInt(문자열) = 자바스크립트 parseInt(문자열)
+			console.log(xyz + 10); 	// 133
+			
+			var xyz2 = parseInt("hello");	//NaN
+			console.log(xyz2); 	// NaN
+			
+			//////////////////////////
+			name = 200;		// string => number 데이터 변경 저장시 문제 없음
+			console.log(name);
+			
+			
+			///////////////////////////
+			console.log(array);	// [1,2,3,4] 배열
+			console.log(obj);	// {"username": "이순신", "age": 44}
+			
+			//Json객체 사용법
+			console.log("obj.username", obj.username, "obj.age", obj.age);
+			// obj.username 이순신 obj.age 44
+			
+			console.log("obj['username']", obj['username']);
+			// obj['username'] 이순신
+			
+			console.log("obj[0]", obj[0]);	// undefined
+			
+			//////////////////////////////
+			
+			console.log(result);	// true
+			console.log(xxx);	//undefined
+			console.log(kkk);	//null
+			console.log("funcion", zzz);	// function 객체 출력
+			// funcion ƒ () {}
+			
+			// 객체에 없는 프로퍼티 접근은 undefined
+			var foo = {
+					"name": 'sss',
+					"age": 20
+			}
+			console.log(foo.name + "\t" + foo["name"]);	// 접근방법 기억
+			// sss	sss
+			console.log(foo.age + "\t" + foo["age"]);	// 접근방법 기억
+			// 20	20
+			console.log(foo[0] + "\t" + foo[1]);
+			// undefined	undefined
+			
+		</script>
+	</head>
+		<body>
+			<p>hello</p>
+			
+		</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			
+			var myCars = ["BMW" , "Benz" , "티코"];
+			
+			console.log("=== 일반 for문 ===");
+			for (var i = 0; i < myCars.length; i++) {
+				console.log(myCars[i]);
+			}
+			
+			console.log("=== for in ===");
+			for ( var num4 in myCars) {	// index
+				console.log("myCars   " + myCars[num4]);
+			}
+			
+			console.log("=== for of ===");
+ 			for (var i of myCars) {	// data
+ 				console.log(i);
+			}
+ 			
+ 			// for in을 이용한 객체 출력
+ 			console.log("=== for in을 이용한 객체 출력 ===");
+ 			var person = { "name": "홍길동", "age": 20, "address": "서울" };
+ 			
+ 			for ( var p in person) {
+				console.log("person 정보: " + p + " : " + person[p]);
+			}
+ 			for ( var p of person) {
+				console.log("person 정보" + p);
+			}	// err
+ 			
+ 	
+		</script>
+	</head>
+	<body>
+	
+	
+	</body>
+</html>

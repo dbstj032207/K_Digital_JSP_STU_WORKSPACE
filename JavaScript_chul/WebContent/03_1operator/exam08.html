@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>variable</title>	
+		<script type="text/javascript">
+
+			var n = 10;
+			var n2 = n++;	// 후치: 저장 후 증가 [n2 = n] => [n = n + 1]
+			console.log(n, n2); // n = 11, n2 = 10
+			
+			var n = 10;
+			var n2 = ++n;	// 전치: 증가 후 저장 [n = n + 1] => [n2 = n] 
+			console.log(n, n2); // n = 11, n2 = 11
+			
+		</script>
+	</head>
+		<body>
+			<p>hello</p>
+			
+		</body>
+</html>

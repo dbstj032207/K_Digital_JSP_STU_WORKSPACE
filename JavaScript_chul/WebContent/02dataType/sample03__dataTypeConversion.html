@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dataType</title>	
+		<script type="text/javascript">
+
+			// 1. +는 연결 연산자로 동작됨
+			// /, *. - 자동형변환 후 계산
+			var x2 = "10" - 5;	// 5
+			var x3 = "10" * 5;	// 50
+			var x4 = "10" / 5;	// 22
+			var x1 = "10" + 1 + 2;	// (주의) +는 자동 형 변환이 안됨  //문자열로 저장
+			console.log(x1 + " " + x2 + " " + x3 + " " + x4);
+			// 1012 5 50 22
+			
+			var x1 = parseInt("10") + 1 + 2;	// 같은 변수를 다시 사용해도 에러가 안남
+			console.log(x1 + " " + x2 + " " + x3 + " " + x4);
+			// 13 5 50 22
+			
+			var x1 = 1 + 2 + "10";
+			console.log(x1 + " " + x2 + " " + x3 + " " + x4);
+			// 310 5 50 22
+			
+			
+			// 2. 불린 값
+			var y1 = 0;	// false
+			var y2 = '';	// false
+			var y3 = parseInt("aaa");	//NaN 	// false
+			var y4 = null;
+			var y5;
+			
+			var name = "hello";
+			var obj = [];
+			var newName = new String("hello");
+			var test = 100;
+			
+			if(!y1){	// 0 => false 형변환 => true
+				console.log("y1은 false 이다." + y1);	// 0출력
+			}
+			if(!y2){
+				console.log("y2은 false 이다." + y1);	// 0출력			
+			}
+			if(!y3){
+				console.log("y3은 false 이다." + y1);	// 0출력
+			}
+			if(!y4){
+				console.log("y4은 false 이다." + y1);	// 0출력
+			}
+			if(!y5){
+				console.log("y5은 false 이다." + y1);	// 0출력
+			}
+			
+			if (test) { // true로 형변환이 됨
+				console.log("test는 true 이다.");
+			}
+			if (newName) {
+				console.log("newName는 true 이다.");
+			}
+			if (obj) {
+				console.log("obj는 true 이다.");
+			}
+			if (name) {
+				console.log("name는 true 이다.");
+			}
+			
+		</script>
+	</head>
+		<body>
+			<p>hello</p>
+			
+		</body>
+</html>

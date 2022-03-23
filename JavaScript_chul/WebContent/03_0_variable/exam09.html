@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>variable</title>	
+		<script type="text/javascript">
+
+			var scope = "hello";	// 전역
+			
+			function f() {
+				document.write(scope + "<br>");	// 브라우저에 출력 - undefined
+				var scope = "test";	// 지역변수
+				document.write(scope + "<br>");	// test - 지역변수 사용
+				test = "aaa"; // (주의) var를 붙이지 않을 경우 전역변수로 사용됨
+			}
+			f();	// 함수 호출 주의
+			console.log(test);	// aaa 출력
+			
+		</script>
+	</head>
+		<body>
+			<p></p>
+			
+		</body>
+</html>

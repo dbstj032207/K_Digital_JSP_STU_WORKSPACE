@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>variable</title>	
+		<script type="text/javascript">
+
+			var k = (4 > 5) ? 100 :200;
+			console.log(k);	// 200
+			
+			var k2 = (4 > 5) ? alert(1) : alert(2);
+			console.log(k2);	// 경고창2, undefined
+			
+			var k3 = (4 > 5) ? (alert(1), 100) : (alert(2), 200);
+			console.log(k3);	// 경고창2, 200
+			
+			var k4 = ("22") ? 100 : 200;	//true
+			console.log(k4);	// 100
+			
+		</script>
+	</head>
+		<body>
+			<p></p>
+			
+		</body>
+</html>
