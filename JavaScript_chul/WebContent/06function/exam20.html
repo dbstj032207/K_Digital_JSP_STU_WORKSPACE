@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			// 1. 경고창
+			alert("경고문......");	// alert창의 확인은 누르기 전까지 아래 코드는 실행되지 않음
+			console.log("======================");
+			
+			function aaa() {
+				alert("aaa");
+				console.log("======================");
+			}
+			aaa();
+			
+			// 2. setTimeout 함수, 시간을 설정해서 지정된 시간이 흐른뒤에 함수 호출
+			
+			setTimeout(function() {	// 함수 직접 구현 넘기기
+				alert("aaa")
+			}, 3000);
+			
+			
+			setTimeout(aaa, 3000);	// aaa함수 3초뒤 실행
+			
+			var test = aaa;
+			setTimeout(test, 3000); 
+			
+			// 3. setInterval 함수, 시간을 설정해서 지정된 시간이 흐른뒤에 반복적으로 함수 호출
+			var kkk = setInterval(function() {
+				console.log("setInterval");
+			}, 3000);
+			
+			setInterval(aaa, 3000);
+			
+			setTimeout(function() {
+				clearInterval(kkk);
+			}, 10000);
+			
+			
+		</script>
+	</head>
+	<body></body>
+</html>

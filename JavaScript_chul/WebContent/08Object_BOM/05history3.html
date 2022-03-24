@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			
+			document.write(history.length + "<br>");
+			function back() {
+				history.back();	// 이전 페이지로 이동
+			}
+			
+			function home() {
+				console.log(history.length);
+				history.go(-2);	// 홈으로
+			}
+			
+		</script>
+	</head>
+	<body>
+		현재 05history3.html 입니다.<br>
+		<a href="javascript:back()">back</a><br>
+		<a href="javascript:home()">첫화면</a>
+	
+	</body>
+</html>

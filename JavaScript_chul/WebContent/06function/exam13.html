@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			function aaa() {
+				console.log("aaa 함수");
+			}
+			function bbb() {
+				console.log("bbb 함수");
+				return aaa;
+			}
+			function ccc() {
+				return function(n1, n2){
+					return n1 + n2;
+				};
+			}
+			
+			// 3. 일급객체의 세번째 특징 - 리턴값에 함수 사용
+			var x = bbb();	// bbb 함수
+			console.log(x); 	// ƒ aaa() {
+								//		console.log("aaa 함수");
+								// }
+			x();	// aaa 함수
+			////////////////////////////
+			var y = ccc();
+			console.log(y);		// ƒ (n1, n2){
+								//		return n1 + n2;
+								// }
+			console.log(y(10, 20));		// 30
+			
+		</script>
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			function xxx() {
+				console.log("xxx호출됨");
+				window.close();
+			}
+			
+			function xxx2() {
+				console.log("xxx2호출됨");
+				opener.close();
+			}
+			
+		</script>
+	</head>
+	<body>
+		이페이지는 자식페이지 입니다.<br>
+		<button onclick="xxx()">창닫기</button>
+		<button onclick="xxx2()">부모창닫기</button>
+	</body>
+</html>

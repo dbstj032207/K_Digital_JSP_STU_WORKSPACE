@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			var aaa = function() {	
+				console.log("aaa 호출");
+			};
+			
+			aaa();	//익명함수 변수 저장 후 호출
+			// aaa 호출
+
+			var bbb = function(n) {	
+				console.log("bbb 호출", n);
+			};
+			
+			bbb(100);	//익명함수 변수 저장 후 호출
+			// bbb 호출 100
+			
+			var ccc = function() {	
+				console.log("ccc 호출");
+				return 100;
+			};
+			
+			var x = ccc(); 	// ccc 호출
+			console.log(x);	// 100
+			
+			var ddd = function(n) {	
+				console.log("ddd 호출", n);
+				return 100;
+			};
+			
+			var x2 = ddd("홍");	// ddd 호출 홍
+			console.log(x2);	// 100
+			
+		</script>
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			
+	    var n2 = [10, 20, 9];  //배열생성
+	
+	    // push: 데이터 추가
+	    n2.push(20);
+	    n2.push(30);
+	    n2.push(1, 2);
+	    console.log(n2);
+	    
+	    // pop: 맨 마지막 데이터 제거
+	    n2.pop();
+	    console.log(n2);
+	    
+	    n2.pop();
+	    console.log(n2);
+	    
+	    
+	    var n3 = [1, 2, 3, 4, 5];
+	    // reverse: 배열 요소를 거꾸로 전환
+		n3.reverse();
+		console.log(n3);
+		
+		// indexOf: 지정한 값에 해당하는 index값 리턴
+		var n4 = ["A", "B", "C", 10, true, 4.2];
+	    var x = n4.indexOf("C");	
+	    console.log(x);	// 2
+
+	    // slice: 배열로부터 지정한 start롸 end요소를 리턴한다
+	    var x2 = n4.slice(0, 3);	// 시작 index, 끝index -1
+	    console.log(x2);	// A, B, C
+	    
+	    // splice: 배열에 값을 저장하거나 삭제하는 메소드이다.
+	    //         지정한 index위치에 값을 저장한다. delCount는 삭제할 개수이다.
+	    var n5 = ["A", "B", "C", 10, true, 4.2];
+		n5.splice(1, 4);	// 1부터 시작, 갯수
+		console.log(n5);	// ['A', 4.2]
+		
+		
+	    var n6 = ["A", "B", "C", 10, true, 4.2];
+	    n6.splice(0, 1, 100);	// 0부터 시작해서 1개 => "A" 삭제, 그 자리에 100 추가
+	    console.log("n6>>>>", n6);
+	    
+	    
+		</script>
+	</head>
+	<body>
+	
+	
+	</body>
+</html>

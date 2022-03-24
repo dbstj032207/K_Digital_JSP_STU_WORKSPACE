@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			// 함수 표현식
+			var aaa = function() {	
+				console.log("aaa 호출");
+				return 100;
+			};
+			
+			// 일급 객체 - 변수저장
+			var xxx1 = aaa; 	
+			var xxx2 = aaa();	// exam16.html:9 aaa 호출
+			console.log(xxx1());	// 100
+			console.log(xxx1);	// ƒ () {	
+								//		console.log("aaa 호출");
+								//		return 100;
+								//	}
+			console.log(xxx2);	// 100
+			/////////////////////////////////////////////
+			
+			// 일급객체 - 전달값으로 사용
+			function kkk(x) {	// 매개변수로 익명함수를 받음
+				console.log("kkk 호출", x);
+				x();	// trigger(트리거) 역할 	// 익명함수를 실행
+			}
+			
+			var ppp = function () {
+				console.log("ppp 호출");
+			};
+	
+			kkk(ppp);	// kkk함수에 매개변수로 익명함수 전달
+			// kkk 호출    ƒ () {
+			//				console.log("ppp 호출");
+			//			}
+			
+			// ppp 호출
+			
+			/////////////////////////////////////////////////
+			// 일급객체 - 리턴값으로 사용
+			function ttt() {	
+				console.log("ttt 호출", eee);
+				return eee;	
+			}
+			var eee = function () {
+				console.log("eee 호출");
+			};
+			
+			var k = ttt(); 	// ttt 호출 	ƒ () {
+							//				console.log("eee 호출");
+							//			}
+			k();	// eee 호출
+			
+			
+		</script>
+	</head>
+	<body></body>
+</html>

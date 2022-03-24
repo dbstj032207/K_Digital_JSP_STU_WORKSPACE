@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			//날짜 생성
+			var d = new Date();
+			console.log(d);	//현재 날짜 	// Thu Mar 24 2022 15:06:12 GMT+0900 (한국 표준시) 
+			
+			console.log("년도", d.getFullYear());		// 2022
+			console.log("월", d.getMonth() + 1);		// 3
+			console.log("일", d.getDate());		// 24
+			console.log("시간", d.getHours());	// 15
+			console.log("분", d.getMinutes());	// 6
+			console.log("초", d.getSeconds());	// 12
+			
+			// 변경
+			d.setFullYear(2020);	
+			d.setMonth(7);	// 7월이 아닌 8월로 적용
+			d.setDate(20);
+			console.log(d);	// Thu Aug 20 2020 15:10:13 GMT+0900 (한국 표준시)
+			
+			var dd = new Date();
+			var str;
+			console.log(dd.getDay);
+			switch (dd.getDay()) {//0: 일요일 
+				case 0:
+					  str = "일요일"; break;
+				case 1:
+					  str = "월요일"; break;
+				case 2:
+					  str = "화요일"; break;
+				case 3:
+					  str = "수요일"; break;
+				case 4:
+					  str = "목요일"; break;
+				default:
+					  str = "주말"; break;
+					break;
+			}
+			console.log("오늘은 "  + str)
+			
+			var now = new Date();
+			var yesDay = new Date(now.setDate(now.getDate() + 1));	// 내일 날짜
+			console.log(yesDay);
+			
+		</script>
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			console.log(location.origin);
+	   		console.log(location.pathname);
+		   	console.log(location.hostname);
+		   	console.log(location.host);
+		   	console.log(location.protocol);
+		   	console.log(location.port);
+		   	
+		   	function xxx() {
+				location.reload();	// 현재 페이지 새로고침
+			}
+		   	
+		   	function yyy() {
+		   		alert();
+				location.href="target.html";
+			}
+		   	function target2() {
+				document.getElementById("myForm").action = "target2.html";
+			}
+		   	function target3() {
+				location.href="target2.html";
+			}
+		   	
+		</script>
+	</head>
+	<body>
+		폼의 바깥<br>
+		<button onclick = "xxx()">reload</button><br>
+		<a href="javascript:yyy()">target.html</a><br>
+		<button onclick = "yyy()">버튼target.html</button><br>
+		<button onclick = "location.href='target.html'">location.href='target.html'</button><br>
+		<hr>
+		
+		<form id = "myForm" action="target.html">
+			<input type="text" name = "userid"><br>
+			
+			<button onclick = "target2()">target2.html</button><br>
+			<button onclick = "location.href='target2.html'">location.href='target2.html'</button><br>
+			
+			<button onclick = "target3()">target3()</button><br>
+			<button>전송</button>
+		
+		</form>
+	
+	</body>
+</html>

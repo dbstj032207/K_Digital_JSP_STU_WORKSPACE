@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			function aaa() {
+				console.log("aaa 함수");
+				return 100;
+			}
+			function bbb(x) {
+				console.log("bbb 함수", x);
+				x();
+			}
+			
+			// 2. 자바스크립트 첫번째 특징 - 전달값에 함수 사용
+			bbb(aaa); 	// bbb함수에 매개변수로 aaa함수를 전달
+			bbb(aaa());	// bbb함수에 매개변수로 aaa함수의 return 값을 전달
+			
+		</script>
+	</head>
+	<body></body>
+</html>

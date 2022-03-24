@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			// 즉시호출함수
+			(
+				function () {
+					console.log("즉시호출함수");	
+				}		
+			)();
+			
+			(function (n) {
+				console.log("즉시호출", n);	
+			})(10);
+			
+			
+		</script>
+	</head>
+	<body></body>
+</html>

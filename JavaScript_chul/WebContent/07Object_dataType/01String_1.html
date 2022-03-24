@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			//문자열 생성방법
+	     	//가. new 이용
+			var s = new String("HelLo");
+	    	//나. 리터럴 이용
+	     	var s2 = "HelLo";
+	    
+	     	console.log("문자열 길이", s.length);	// 5
+	     	console.log("특정문자구하기", s.charAt(0));	// H
+	     	var ss = s.concat(" world");
+	     	console.log("문자열 연결", ss);		// HelLo world
+	     	var ss2 = s.concat(" aa" , "bbb");
+	        console.log("문자열 연결2", ss2);	// HelLo aabbb
+	        ///////////////////////////////////////////////
+	        console.log("특정문자위치", ss.indexOf('e')); //1
+	        console.log("부분열", s.substring(1,3)); //el
+	        console.log("부분열", s.substr(1,3)); //elL
+	        console.log("대문자", s.toUpperCase()); 	// HELLO
+	        console.log("소문자", s.toLowerCase());	// hello
+	        var xx = "Hello world happy";
+			var arr = xx.split(" ");	// " "(공백) 기준으로 분할 => 배열로 반환
+			for ( var i in arr) {
+				console.log(arr[i]);
+			}
+
+			var xx2 = "Hello/world/happy/xxx/yyyy";
+			var arr2 = xx2.split("/", 3);	// "/" 기준으로 분할, 3개만
+			for ( var i in arr2) {
+				console.log(arr2[i]);
+			}
+			
+			var kk = "Hello";
+			console.log("replace", kk.replace("H", "A"));	// 단어 변경 => Aello
+			var kk2 ="     world     ";
+			console.log(kk2.length, kk2.trim().length);	// 15 5
+			
+		</script>
+	</head>
+	<body>
+	
+	
+	</body>
+</html>

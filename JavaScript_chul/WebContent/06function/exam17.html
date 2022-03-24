@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+			function kkk(x) {	
+				console.log("kkk 호출", x);
+				x();	
+			}
+			
+			kkk(
+				function () {	// 함수코드를 직접 넘김
+					console.log("ppp 호출");
+				}	
+			);
+			
+			/////////////////////////////
+			
+			function ttt() {	
+				console.log("ttt 호출");
+				return function () {	// 함수코드를 직접 넘김
+					console.log("eee 호출");
+				};
+			}
+			
+			var k = ttt();
+			k();
+			
+		</script>
+	</head>
+	<body></body>
+</html>

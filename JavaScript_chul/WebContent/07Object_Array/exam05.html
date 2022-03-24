@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+		// sort: 정렬
+		var n = [1,2,9,5,4,8];
+		n.sort(); 	// 기본 오름차순
+		console.log(n);
+		n.reverse();	// 내림차순으로 재 정렬
+		console.log(n);
+		
+		var n2 = [1,2,9,5,4,8];
+		n2.sort(function (a, b) { return b - a;});	// 내림차순으로 정렬
+		console.log(n2);
+		
+		var n3 = [1,2,9,5,4,8];
+		n3.sort(function (a, b) { return a - b;});	// 오름차순으로 정렬
+		console.log(n3);
+	    
+		
+		var n3 = ["A","B","C"];
+		// sperator 조인
+		var n4 = n3.join(" and ");	
+		console.log(n4);
+		
+		</script>
+	</head>
+	<body>
+	
+	
+	</body>
+</html>
