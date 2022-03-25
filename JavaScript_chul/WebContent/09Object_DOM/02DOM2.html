@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>		
+	</head>
+	<body>
+		<img src="../image/a.jpg" width="200" height="200" id="flag">
+		<button onClick="before()">전</button>
+		<button onClick="next()">후</button>
+		<script type="text/javascript">
+			
+			var arr = ["a.jpg", "b.jpg", "c.jpg"];	// 전역변수
+			var i = 0; // 전역변수
+			img = document.getElementById("flag");
+			
+			function next() {
+				if (i != 2) {
+					i++;
+					img.src = "../image/" + arr[i]
+				}
+				
+			}
+			
+			function before(){
+				if (i != 0) {
+					i--;
+					img.src = "../image/" + arr[i]
+				}
+			}
+			
+		</script>
+	</body>
+</html>

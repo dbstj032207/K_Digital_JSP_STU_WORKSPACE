@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type="text/javascript">
+
+			function sum(n){
+				var v1 = document.getElementById("v1").value;
+				var v2 = document.getElementById("v2").value;
+				var result = 0;
+				switch (n) {
+					case '+':	
+						result = parseInt(v1) + parseInt(v2);
+						break;
+					case '-':
+						result = parseInt(v1) - parseInt(v2);
+						break;
+
+					default:
+						break;
+				}
+				
+				document.getElementById("result").innerText = result;
+			}
+			
+		</script>	
+	</head>
+	<body>
+	
+		값1:<input type="text" name="v1" id="v1"><br>
+		값2:<input type="text" name="v2" id="v2"><br>
+		<a href="javascript: sum('+')">+</a><br>
+		<a href="javascript: sum('-')">-</a><br>
+		결과값:<div id="result"></div>
+		
+	</body>
+</html>

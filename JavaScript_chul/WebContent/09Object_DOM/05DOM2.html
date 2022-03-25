@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type="text/javascript">
+
+			function xxx(){
+				document.getElementById("xx").value = document.getElementById("x").innerText;
+				console.log(document.getElementById("x").innerText);	// 태그와 태그사이의 문자
+				document.getElementById("x").innerText = "test";
+				console.log(document.getElementById("y").innerText);	// 문자만
+				console.log(document.getElementById("y").innerHTML);	// 태그를 포함하여
+				document.getElementById("y").innerHTML = "<h6>이순신</h6>";	// 태그 변경
+				console.log(document.getElementById("yy").innerText);
+			}
+			
+		</script>	
+	</head>
+	<body>
+		<input type="text" id="xx">
+		<div id="x">홍길동</div>
+		<div id="y"><h1>이순신</h1></div>
+		<p id = "yy">유관순</p>
+		
+		<button onclick="xxx()">확인</button>
+
+		
+	</body>
+</html>

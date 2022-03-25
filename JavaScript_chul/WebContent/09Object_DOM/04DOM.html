@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type="text/javascript">
+
+			function xxx(){
+				var fruit = document.getElementById("fruits");
+				console.log(fruits.value);
+			}
+			
+			function xxx2(s){
+				console.log(s.value);
+			}
+			
+			function xxx3(s){
+				console.log(s);
+			}
+			
+			
+			
+		</script>	
+	</head>
+	<body>
+		<select id="fruits" onchange="xxx()">
+			<option value="사과">사과</option>
+			<option value="바나나">바나나</option>
+			<option value="수박">수박</option>
+			<option value="포도">포도</option>
+		</select><br>
+		
+		<select id="fruits2" onchange="xxx2(this)">
+			<option value="사과">사과</option>
+			<option value="바나나">바나나</option>
+			<option value="수박">수박</option>
+			<option value="포도">포도</option>
+		</select>
+		
+		<select id="fruits3" onchange="xxx3(this.value)">
+			<option value="사과">사과</option>
+			<option value="바나나">바나나</option>
+			<option value="수박">수박</option>
+			<option value="포도">포도</option>
+		</select>
+	</body>
+</html>

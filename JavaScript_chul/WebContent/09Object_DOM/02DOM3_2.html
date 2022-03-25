@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type="text/javascript">
+			
+			var arr = ["a.jpg", "b.jpg", "c.jpg", "d.jpg", "e.jpg", "f.jpg", "g.jpg", "h.jpg", "i.jpg"];
+			var i = 0; // 전역변수
+
+			function change(n) {
+				
+				imges = document.getElementsByTagName("img");
+				// console.log(imges);
+				// console.log(imges[0]);
+				
+				switch (n) {
+					case 1:
+						i = 0;
+						for ( var x in imges) {
+							imges[x].src = "../image/" + arr[i];
+							i++;
+						}
+						break;
+					case 2:
+						i = 3;
+						for ( var x in imges) {
+							imges[x].src = "../image/" + arr[i];
+							i++;
+						}
+						break;
+					case 3:
+						i = 6;
+						for ( var x in imges) {
+							imges[x].src = "../image/" + arr[i];
+							i++;
+						}
+						break;
+
+					default:
+						break;
+				}
+			}
+			
+			
+		</script>	
+	</head>
+	<body>
+		<img src="../image/a.jpg" width="200" height="200">
+		<img src="../image/b.jpg" width="200" height="200">
+		<img src="../image/c.jpg" width="200" height="200"><br>
+		<a href="javascript: change(1)">1</a>
+		<a href="javascript: change(2)">2</a>
+		<a href="javascript: change(3)">3</a>
+	</body>
+</html>

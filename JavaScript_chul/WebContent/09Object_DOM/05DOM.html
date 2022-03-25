@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type="text/javascript">
+
+			function xxx(){
+				console.log("==============");
+				var ssn1 = document.getElementById("ssn1").value
+				if(ssn1.length == 6){
+					document.getElementById("ssn2").focus();
+				}
+				
+			}
+			
+		</script>	
+	</head>
+	<body>
+	
+		주민번호<input type="text" id="ssn1" name="ssnA" onkeyup="xxx()">-
+		<input type="text" id="ssn2" name="ssnB">
+		
+	</body>
+</html>

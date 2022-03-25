@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type="text/javascript">
+
+			function xxx(){
+				var arr = document.getElementsByClassName("fruits");
+				console.log(arr);
+				
+				var str = "";
+				for (var i = 0; i < arr.length; i++) {
+					var c = arr[i];
+					if(c.checked){
+						str+= c.value + "<br>";
+					}
+				}
+				document.getElementById("result1").innerHTML = "<h1>" + str + "</h1>";
+				
+				document.getElementById("result2").innerText = str;
+			}
+			
+			function test(s) {
+				console.log(s);
+				var arr = document.getElementsByClassName("fruits");
+				for (var i = 0; i < arr.length; i++) {
+					var c = arr[i];
+					c.checked = s.checked;
+				}
+			}	
+			
+		</script>	
+	</head>
+	<body>
+		모두선택 <input type="checkbox" id="x" onclick="test(this)">
+		<hr>
+		좋아하는 &nbsp;&nbsp;&nbsp; 과일 선택하기<br>
+		사과<input type="checkbox" class="fruits" name="fruits" value="apple"><br>
+		오렌지<input type="checkbox" class="fruits" name="fruits" value="orange"><br>
+		바나나<input type="checkbox" class="fruits" name="fruits" value="banana"><br>
+		<button onclick="xxx()"> 결과보기</button>
+		<hr>
+		<div id = "result1"></div>
+		<hr>
+		<div id = "result2"></div>
+
+		
+	</body>
+</html>

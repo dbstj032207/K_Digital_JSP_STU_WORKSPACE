@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			
+			function calc(n) {
+				var v1 = document.getElementById("v1").value;
+				var v2 = document.getElementById("v2").value;
+				var result = document.getElementById("result");
+				
+				switch (n) {
+					case '+':
+						result.value = parseInt(v1) + parseInt(v2);
+						break;
+					case '-':
+						result.value = parseInt(v1) - parseInt(v2);				
+						break;
+					case '*':
+						result.value = parseInt(v1) * parseInt(v2);
+						break;
+					case '/':
+						result.value = parseInt(v1) / parseInt(v2);
+						break;
+	
+					default:
+						break;
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		값1<input type="text" name="val1" id="v1"><br>
+		값2<input type="text" name="val2" id="v2"><br>
+		<button onClick="calc('+')">+</button>
+		<button onClick="calc('-')">-</button>
+		<button onClick="calc('*')">*</button>
+		<button onClick="calc('/')">/</button>
+		<br>
+		결과값<input type="text" id="result" name="resultval"><br>
+		
+	</body>
+</html>

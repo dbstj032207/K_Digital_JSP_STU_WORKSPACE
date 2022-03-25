@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+		function xxx() {
+			console.log("xxx() 호출됨");
+		}
+		
+		</script>
+	</head>
+	<body>	
+
+		<form action="test/target.html" onsubmit="xxx()"><!-- 인라인 방식 처리 submit이벤트 발생시  -->
+		아이디======1<input type="text" name="userid"><br>
+		비번=======1<input type="text" name="passwd"><br>
+		<button>버튼</button><!--  xxx()호출 -->
+		<input type="submit" value="로그인">
+		<input type="reset" value="취소"><br>
+		</form>
+
+	</body>
+</html>
