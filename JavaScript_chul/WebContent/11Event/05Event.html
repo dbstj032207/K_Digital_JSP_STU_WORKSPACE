@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			window.onload = function () {
+
+				var all_C = document.querySelector("#allCheck");
+				
+				all_C.addEventListener("click", check, false);
+
+				var test_button = document.querySelector("#test");
+				
+				test_button.addEventListener("click", view, false);
+				
+			};
+			
+			function check() {
+				
+				var fruits = document.querySelectorAll(".fruits");
+				for (var i = 0; i < fruits.length; i++) {
+					fruits[i].checked = this.checked;
+				}
+				
+			}
+			
+			function view() {
+				
+				var fruits = document.querySelectorAll(".fruits:checked");
+				var resultSpan = document.querySelector("#result");
+				var result = "";
+				for (var i = 0; i < fruits.length; i++) {
+					result += fruits[i].value + "&nbsp;&nbsp;";
+				}
+				resultSpan.innerHTML = result;
+			}
+			
+		</script>
+	</head>
+	<body>	
+
+		전체선택<input type="checkbox" name="allCheck" id="allCheck"><br>
+		<hr>
+		사과<input type="checkbox" name="fruits" class="fruits" value="사과"><br>
+		수박<input type="checkbox" name="fruits" class="fruits" value="수박"><br>
+		바나나<input type="checkbox" name="fruits" class="fruits" value="바나나"><br>
+		오렌지<input type="checkbox" name="fruits" class="fruits" value="오렌지"><br>
+		<button id="test"> 확인</button><br>
+		<span id="result"> </span>
+
+	</body>
+</html>

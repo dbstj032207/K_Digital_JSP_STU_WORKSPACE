@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function () {
+				document.getElementById("update").addEventListener("click", update, false);
+				document.getElementById("delete").addEventListener("click", del, false);
+				document.getElementById("sendForm").addEventListener("click", sendForm, false);
+				document.getElementById("send").addEventListener("click", send, false);
+			};
+			
+			function update() {
+				document.getElementById("myForm").action = "update.html";
+				//event.preventDefault();
+			}
+			
+			function del() {
+				document.getElementById("myForm").action = "delete.html";
+			}
+			
+			function sendForm() {
+				document.getElementById("myForm").action = "send.html";
+			}
+			function send() {
+				document.getElementById("myForm").action = "send.html";
+				document.getElementById("myForm").submit(); // 주의 강제로 submit실행, 폼데이터 넘어감 
+			}
+			
+			function test() {
+				location.href = "target.html";	// 폼 데이터가 넘어가지 않음
+			}
+		</script>
+	</head>
+	<body>	
+		<form action="#" id="myForm">
+			아이디<input type="text" name="userid"><br>
+			비밀번호<input type="text" name="passwd"><br>
+			<input type="submit" value="전송"><br>
+			<button id="update">수정</button><!-- update.html -->
+			<button id="delete">삭제</button><!--  delete.html-->
+			<button id="sendForm">전송</button><!--  send.html-->
+			<button onclick="test()">버튼 inline방식</button>
+		</form>
+		<hr>
+		폼의 바깥
+		<button id = "send">전송</button>
+	</body>
+</html>

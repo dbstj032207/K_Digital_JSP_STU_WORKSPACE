@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			function setView() {
+				var image = document.querySelector("#images");
+				image.style.visibility = "visible";
+			}
+			function unsetView() {
+				var image = document.querySelector("#images");
+				//image.style.visibility = "hidden";
+				image.style="visibility:hidden";
+			}
+		</script>
+	</head>
+	<body>	
+
+		<input type="button" id="vi" value="보이기" onclick="setView()"><br>
+		<input type="button" id="unvi" value="감추기" onclick="unsetView()"><br>
+		
+		<img id="images" src="../image/a.jpg">
+		<div>dummy</div>
+
+	</body>
+</html>

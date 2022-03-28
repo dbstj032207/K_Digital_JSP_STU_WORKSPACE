@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var itemList = [];
+			window.onload = function () {
+				var addBtr = document.querySelector("#add");
+				addBtr.addEventListener("click", addList);
+
+			}	
+			
+			function addList() {
+				var item = document.querySelector("#item").value;
+				if (item != null) {
+					itemList.push(item);
+					document.querySelector("#item").value = "";
+					document.querySelector("#item").focus();
+				}
+				showList();
+				console.log("itemList", itemList);
+			}
+			
+			function showList() {
+				var list = "<ul>";
+				for (var i = 0; i < itemList.length; i++) {
+					console.log(itemList[i]);
+					list += "<li>" + itemList[i] + "</li>";
+				}
+				list += "<ul>"
+				console.log("list", list);
+				document.querySelector("#itemList").innerHTML = list;
+			}
+			
+			
+		</script>
+	</head>
+	<body>	
+
+		<form >
+			<input type="text" id="item" autofocus>
+			<button type="button" id="add" class="button">
+			추가</button><br>
+			<div id="itemList"></div>
+		</form>
+
+
+	</body>
+</html>

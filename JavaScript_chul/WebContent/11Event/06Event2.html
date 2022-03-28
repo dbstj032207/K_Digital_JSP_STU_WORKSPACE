@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var itemList = [];
+			window.onload = function () {
+				var addBtr = document.querySelector("#add");
+				addBtr.addEventListener("click", addList);
+
+			}	
+			
+			function addList(mesg) {
+				var item = document.querySelector("#item").value;
+				if (item != null) {
+					itemList.push(item);
+					document.querySelector("#item").value = "";
+					document.querySelector("#item").focus();
+				}
+				showList();
+				//console.log("itemList", itemList);
+			}
+			
+			function showList() {
+				var list = "<ul>";
+				for (var i = 0; i < itemList.length; i++) {
+					//console.log(itemList[i]);
+					list += "<li>" + itemList[i] + "&nbsp;<span class='close' id=" + i + ">X</sapn></li>";	
+					// 배열의 인덱스 값을 id로 지정 => 추후 해당 id값을 인덱스값으로 이용하여 삭제
+				}
+				list += "<ul>"
+				//console.log("list", list);
+				document.querySelector("#itemList").innerHTML = list;
+				var remove = document.querySelectorAll(".close");
+				
+				for (var i = 0; i < remove.length; i++) {
+					remove[i].addEventListener("click", removeList);
+				}
+				
+			}
+			function removeList() {
+				var id = this.getAttribute("id");
+				console.log("remove List id ====", id);
+				itemList.splice(id, 1);	// id번호중 1개 삭제
+				showList();
+			}
+			
+		</script>
+	</head>
+	<body>	
+
+		<form >
+			<input type="text" id="item" autofocus>
+			<button type="button" id="add" class="button">
+			추가</button><br>
+			<div id="itemList"></div>
+		</form>
+
+
+	</body>
+</html>

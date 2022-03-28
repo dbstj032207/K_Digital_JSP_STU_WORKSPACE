@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			function formSubmit() {
+				var result = true;
+				var str = "";
+				
+				var userid = document.getElementById("userid").value;
+				var passwd = document.getElementById("passwd").value;
+				var username = document.getElementById("username").value;
+				var email = document.getElementById("email").value;
+				var idSpan = document.getElementById("idSpan");
+				var pwSpan = document.getElementById("pwSpan");
+				var nameSpan = document.getElementById("nameSpan");
+				var emailSpan = document.getElementById("emailSpan");
+				
+				console.log("!");
+				
+				if (userid.length == 0) {
+					str = "아이디 에러";
+					idSpan.innerHTML = str;
+					pwSpaninnerHTML = "";
+					nameSpaninnerHTML = "";
+					emailSpaninnerHTML = "";
+					
+					result = false;
+					
+				}else if (passwd.length == 0 || Number.isNaN(parseInt(passwd))) {
+					str = "비번 에러";
+					idSpan.innerHTML = "";
+					pwSpaninnerHTML = str;
+					nameSpaninnerHTML = "";
+					emailSpaninnerHTML = "";
+					
+					result = false;
+					
+				}else if (username.length >= 4 || username.length == 0) {
+					str = "이름 에러";
+					idSpan.innerHTML = "";
+					pwSpaninnerHTML = "";
+					nameSpaninnerHTML = str;
+					emailSpaninnerHTML = "";
+					
+					result = false;
+					
+				}else if (email.length == 0) {
+					str = "이메일 에러";
+					idSpan.innerHTML = "";
+					pwSpaninnerHTML = "";
+					nameSpaninnerHTML = "";
+					emailSpaninnerHTML = str;
+					
+					result = false;
+					
+				}
+
+				
+				return result;
+			}
+		
+		</script>
+	</head>
+	<body>	
+
+		<form action="target.html" onsubmit="return formSubmit()"><!-- 주의 -->
+		아이디<input type="text" name="userid" id="userid">
+		<span id="idSpan"></span><br>
+		비번<input type="text" name="passwd" id="passwd">
+		<span id="pwSpan"></span><br>
+		이름<input type="text" name="username" id="username">
+		<span id="nameSpan"></span><br>
+		이메일<input type="text" name="email" id="email">
+		<span id="emailSpan"></span><br>
+		<input type="submit" value="로그인">
+		<input type="reset" value="취소"><br>
+		<button>버튼</button>
+		</form>
+
+
+	</body>
+</html>

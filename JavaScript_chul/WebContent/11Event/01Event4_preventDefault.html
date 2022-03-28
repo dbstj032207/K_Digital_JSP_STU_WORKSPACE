@@ -9,6 +9,24 @@
 			console.log("xxx() 호출됨");
 		}
 		
+		function xxx2() {
+			var id = document.getElementById("userid").value;
+			var passwd = document.getElementById("passwd").value;
+			var result = false;
+			if (id.length >= 3 && passwd.length != 0) {
+				result = true;
+			} else {
+				result = false;
+				alert("xxx2 에러")
+			}
+			return result;
+		}
+		
+		function xxx3(e) {
+			alert("xxx3 submit");
+			e.preventDefault(); // action 금지 event.prevent() 매개변수로 넘어온 이벤트 동작 정지
+			console.log("========================");
+		}
 		</script>
 	</head>
 	<body>	
@@ -20,6 +38,28 @@
 		<input type="submit" value="로그인">
 		<input type="reset" value="취소"><br>
 		</form>
+		
+		<form action="test/target.html" onsubmit="return xxx2()"><!-- 인라인 방식 처리 submit이벤트 발생시  -->
+		아이디======2<input type="text" name="userid" id="userid"><br>
+		비번=======2<input type="text" name="passwd" id = "passwd"><br>
+		<button>버튼</button><!--  xxx2()호출 -->
+		<input type="submit" value="로그인">
+		</form>
+		
+		<form action="test/target.html" onsubmit="xxx3(event)"><!-- 인라인 방식 처리 submit이벤트 발생시  -->
+		아이디======3<input type="text" name="userid"><br>
+		비번=======3<input type="text" name="passwd"><br>
+		<input type="submit" value="로그인"><br>
+		<button>버튼</button><!--  xxx3(event)호출 -->
+		</form>
+		
+		<form action="target.html" id="test"><!-- 주의  -->
+		아이디======4<input type="text" name="userid" ><br>
+		비번========4<input type="text" name="passwd" ><br>
+		<input type="submit" value="로그인"><br>
+		<button>버튼</button>
+		</form>
+		
 
 	</body>
 </html>

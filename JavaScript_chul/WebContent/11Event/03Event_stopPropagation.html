@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			window.onload = function () {
+				var xxx = document.getElementById('xxx');
+				xxx.addEventListener("click", kkk, false);
+				
+				var myForm = document.getElementById("myForm");
+				myForm.addEventListener("submit", function() {
+					
+					event.preventDefault();	//제출금지
+					
+					console.log("submit취소");
+					
+				}, false);
+			};
+			
+			function kkk() {
+				console.log("버튼클릭");
+			}
+		
+		</script>
+	</head>
+	<body>	
+
+		<form action="target.html" id="myForm">
+		아이디<input type="text" name="userid"><br>
+		비번<input type="text" name="passwd"><br>
+		<input type="submit" value="로그인">
+		<input type="reset" value="취소"><br>
+		</form>
+		
+		<button id="xxx">클릭</button>
+
+	</body>
+</html>

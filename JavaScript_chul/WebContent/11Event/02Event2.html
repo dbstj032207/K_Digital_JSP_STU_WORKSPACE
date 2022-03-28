@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+			window.onload = function () {
+				var a = document.getElementById("a");
+				var b = document.getElementById("b");
+				a.addEventListener("click", function() {
+					console.log("a  click");
+				}, false);
+				
+				b.addEventListener("click", function(e) {
+					console.log("b  click");
+					event.stopPropagation();	// 이벤트 전파 방지
+				}, false);
+			};
+		
+		</script>
+	</head>
+	<body>	
+
+		<div id="a" style="background-color: #ff0000">
+		   a
+		    <div id="b" style="background-color: #00ff00">
+		       b
+		    </div>
+		</div>
+
+
+	</body>
+</html>

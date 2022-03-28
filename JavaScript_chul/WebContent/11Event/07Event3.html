@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+		window.onload = function () {
+			var show = document.querySelector("#vi");
+			var hide = document.querySelector("#unvi");
+
+			show.addEventListener("click",  setView, false);
+			hide.addEventListener("click",  unsetView, false);
+
+		};
+		
+		function setView() {
+			var image = document.querySelector("#detail h3");
+			image.style.display = "block";
+		}
+		function unsetView() {
+			var image = document.querySelector("#detail h3");
+			image.style.display = "none";
+		}
+		</script>
+	</head>
+	<body>	
+
+		<input type="button" id="vi" value="보이기"><br>
+		<input type="button" id="unvi" value="감추기"><br>
+		
+		<div id="detail">
+			<h1>아래 내용이 숨겨집니다</h1>
+			
+			<h3>
+			
+				<font color="red">다음과 같은 내용이 숨겨지게 됩니다. </font>
+				
+			</h3>
+		</div>
+
+
+	</body>
+</html>
