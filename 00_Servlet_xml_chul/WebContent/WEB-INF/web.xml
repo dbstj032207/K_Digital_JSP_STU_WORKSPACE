@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+	<display-name>00_Servlet_xml_chul</display-name>
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name> <!-- 별칭 부여 -->
+		<servlet-class>com.controller.HelloServlet</servlet-class> <!-- servlet 경로 -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name> <!-- 별칭을 이용하여 -->
+		<url-pattern>/xxx</url-pattern> <!-- url주소 부여 -->
+	</servlet-mapping>
+</web-app>

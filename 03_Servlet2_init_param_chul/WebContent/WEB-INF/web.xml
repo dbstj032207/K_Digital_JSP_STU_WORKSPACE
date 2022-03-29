@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>03_Servlet2_init_param_chul</display-name>
+  	
+  	<servlet>
+		<servlet-name>InitParamServlet</servlet-name>
+		<servlet-class>com.controller.InitParamServlet</servlet-class>
+		<init-param>
+			<param-name>userid</param-name>
+			<param-value>aaa</param-value>
+		</init-param>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>aaa@naver.com</param-value>
+		</init-param>
+	</servlet>
+
+  	<!--  -->
+	<servlet>
+		<servlet-name>OtherServlet</servlet-name>
+		<servlet-class>com.controller.OtherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitParamServlet</servlet-name>
+		<url-pattern>/xxx</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OtherServlet</servlet-name>
+		<url-pattern>/yyy</url-pattern>
+	</servlet-mapping>
+
+</web-app>
