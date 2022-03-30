@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>05_Servlet_Filter_chul</display-name>
+  	<filter>
+		<filter-name>MyEncodingFilter</filter-name>	<!-- 별칭 지정 -->
+		<filter-class>com.filter.MyEncodingFiter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern> <!-- 모든 주소에 대해 처리함 -->
+	</filter-mapping>
+</web-app>

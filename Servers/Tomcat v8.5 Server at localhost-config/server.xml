@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="03_Servlet2_context_chul" path="/03_Servlet2_context_chul" reloadable="true" source="org.eclipse.jst.jee.server:03_Servlet2_context_chul"/><Context docBase="03_Servlet2_init_param_chul" path="/03_Servlet2_init_param_chul" reloadable="true" source="org.eclipse.jst.jee.server:03_Servlet2_init_param_chul"/><Context docBase="JSPWorkshop12" path="/JSPWorkshop12" reloadable="true" source="org.eclipse.jst.jee.server:JSPWorkshop12"/></Host>
+      <Context docBase="07_JSP1_기본_chul" path="/07_JSP1_기본_chul" reloadable="true" source="org.eclipse.jst.jee.server:07_JSP1_기본_chul"/><Context docBase="07_JSP3_scriptlet_expression_implicit_chul" path="/07_JSP3_scriptlet_expression_implicit_chul" reloadable="true" source="org.eclipse.jst.jee.server:07_JSP3_scriptlet_expression_implicit_chul"/><Context docBase="07_JSP4_1_OUT_CHUL" path="/07_JSP4_1_OUT_CHUL" reloadable="true" source="org.eclipse.jst.jee.server:07_JSP4_1_OUT_CHUL"/></Host>
     </Engine>
   </Service>
 </Server>
