@@ -33,7 +33,8 @@ public class TestController extends HttpServlet {
 		// 요청 위임
 		// 2. forwad방법
 		// 다른 페이지로 화면전환 되나 request가 넘어가서 사용됨, 즉 request에 저장된 데이터를 다른 페이지에서 위임받아 사용할 수 있음
-		RequestDispatcher dis = request.getRequestDispatcher("TestController2");
+		//RequestDispatcher dis = request.getRequestDispatcher("TestController2");
+		RequestDispatcher dis = request.getRequestDispatcher("hello.jsp");
 		dis.forward(request, response);
 
 	}
