@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+			$("#disable").click(function () {
+				console.log("dis>>>>>");
+				$("input[type='text']:enabled").removeAttr("enabled");
+				$("input[type='text']:enabled").attr("disabled", "disabled");
+			});
+			$("#enable").click(function () {
+				console.log("enable>>>>>");
+				$("input[type='text']:disabled").removeAttr("disabled");
+				$("input[type='text']:disabled").attr("enabled", "enabled");
+			});	
+			
+			
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="first">
+		<input type="text" id="second" disabled="disabled">
+		<input type="button" value="enable" id="enable">
+		<button id="disable">disable</button>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+			$("input").click(function() {
+				$("input:focus").css("background-color", "yellow");
+				$("input:not(:focus)").removeAttr("style");
+			});
+			
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" value="one" ></input>
+		<input type="text" value="two" ></input>
+		<input type="text" value="three" ></input>
+	</body>
+</html>

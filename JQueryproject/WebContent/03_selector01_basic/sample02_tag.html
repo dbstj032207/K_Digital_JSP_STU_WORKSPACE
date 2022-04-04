@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		/* 자바 스크립트 코드와 jquery 혼용 가능*/
+			$(document).ready( function () {
+					$("p").css("color", "red");
+					var data = document.getElementsByTagName("p");	//javascript코드
+					console.log(data);	//javascript코드
+					var x = $("p");
+					console.log(x);	// S.fn.init(2)
+					
+					var data1 = document.getElementById("test");
+					console.log(data1);	// <div id="test">world2</div>
+					console.log(data1.innerText); // world2
+					
+					var jdata1 = $("#test");
+					console.log(jdata1); // S.fn.init(1)
+					console.log(jdata1.innerText); // undefined
+													// fn의 경우 기존 js함수 사용이 안되고 jquery 함수 사용
+													// fn인 경우 .value => val(), innerText => text()
+													// innerHtml => html(), img.src="b.jpg" => img.attr("src", "b.jpg")
+					console.log(jdata1.text()); // world2
+					
+					var jdata2 = $("#test2");
+					console.log(jdata2); // S.fn.init(1)
+					console.log(jdata2.value); // undefined
+					console.log(jdata2.val());	// test2
+					// jdata2.val("aaaaa");
+					console.log(jdata2.attr("value")); // test2
+					
+					jdata2.attr("value", "bbbbb");
+													
+					console.log(x[0], x[1], x.length);
+					console.log(x[0].innerText, x[1].innerText);
+					console.log("첫번째 div값", $("div")[0].innerText);
+					console.log("첫번째 div값", $("div")[1].innerText);
+					$(x[1]).css("color", "blue");
+					$("#test").text("aaaaa");
+					console.log($("#test").text());
+					
+				} // end func
+			); // end doc
+		</script>
+	</head>
+	<body>
+		<p>Hello</p>
+		<p>Hello2</p>
+		<div>World</div>
+		<div id="test">world2</div>
+		<input type="text" id="test2" value="test2">
+	</body>
+</html>

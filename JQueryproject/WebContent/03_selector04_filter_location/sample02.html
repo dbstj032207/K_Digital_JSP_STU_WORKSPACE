@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			// 전체 문서 중 첫번째
+			var x = $(":first");	
+			console.log(x);	// fn => html
+			
+			// ul한정: 첫번째 ul
+			var x2 = $("ul:first");
+			console.log(x2);	// fn => ul
+			
+			// 전체 문서중 마지막
+			var x3 = $(":last");
+			console.log(":last>>", x3);	// fn=> div
+			console.log(":last>>", x3.text());	// hello-endenenenenenenen
+			
+			// li한정: 마지막 li
+			var x4 = $("li:last");
+			console.log(x4);
+			 
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>A</li>
+			<li>A2</li>
+			<li>A3</li>
+			<li>A4</li>
+		</ul>
+		<ul>
+			<li>b</li>
+			<li>b2</li>
+			<li>b3</li>
+			<li>b4</li>
+		</ul>
+		<div>
+			<p>Hello</p>
+			<p>hello-end</p>
+		</div>
+		<div>hello-endenenenenenenen</div>
+
+	</body>
+</html>

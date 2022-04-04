@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		
+		$(function () {
+			// 특정 문자열 찾기(대소문자 구별, 자식 포함해서 찾음)	
+			$("div:has(p)").css("color", "red");
+			
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<div>Hello !!!!</div>
+		<div>Hi! hello</div>
+		<div>MyHello , good</div>
+		<div>
+		<p>Hello</p>
+
+	</body>
+</html>

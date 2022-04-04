@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+/* 			var test = $("li");
+			for ( var i in test) {
+				console.log(test[i].innerText);
+			}
+			console.log("====================");
+			for ( var a of test) {
+				console.log(a.innerText);
+			}  */
+			// 부모 기준의 자식하나만 있는 것을 선택
+			//var x = $("h1:only-child");
+			//console.log(x);
+			
+			// 부모를 기준으로 n번째 자식
+			//var x = $(":nth-child");
+			//console.log(x);
+			
+ 			// 짝수 번째
+			var x = $("li:nth-child(even)");
+			console.log("li:nth-child(even)>>>", x);
+			x.css("color", "yellow")
+			
+			// 홀수 번째
+			var x = $("li:nth-child(odd)");
+			console.log("li:nth-child(odd)>>>", x);
+			x.css("color", "red") 
+			
+			
+			/* var x = $("li:odd");
+			x.css("font-size", "40px");
+			console.log("li:odd>>>", x); */
+			
+			
+			
+			
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>A</li>
+			<li>A2</li>
+			<li>A3</li>
+			<li>A4</li>
+		</ul>
+		<ul>
+			<li>b</li>
+			<li>b2</li>
+			<li>b3</li>
+			<li>b4</li>
+		</ul>
+		<div>
+			<p>Hello</p>
+			<p>hello-end</p>
+		</div>
+		<div>hello-endenenenenenenen</div>
+		<div>
+			<h1>eee</h1>
+		</div>
+		
+
+	</body>
+</html>

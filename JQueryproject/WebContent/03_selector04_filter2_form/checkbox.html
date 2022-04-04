@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+			// check의 부모인 span에 스타일 지정
+			$(":checkbox").wrap("<span></span").parent().css("border", "3px dotted red");
+			// 처음 시작화면에 checked된 것을 선택
+			$("input:text").val($("input:checked").val());
+			console.log($("input:checked"))
+			
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		사과<input type="checkbox" checked="checked" value="사과"><br>
+		배<input type="checkbox"  value="배"><br>
+		바나나<input type="checkbox"  value="바나나"><br>
+		<input type="radio" checked="checked" value="aaa">
+		<input type="text">
+	</body>
+</html>

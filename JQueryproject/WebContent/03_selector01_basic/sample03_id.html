@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		/* 자바 스크립트 코드와 jquery 혼용 가능*/
+			$(document).ready( function () {
+					var jdata = $("#a");
+					console.log(jdata);	// S.fn.init(1)
+					console.log(jdata.text());	// Hello
+					var data = document.getElementById("a");
+					console.log(data.innerText);	// Hello
+					console.log($(data).text());
+					
+					$("#a2").css("color", "red");
+					console.log($("#a2").innerText);
+					console.log("text() : ", $("#a2").text());
+					$("#a").text("==================");
+					$("#a").innerText="aaaaaa";
+					
+					$("#d").val("test");
+					$("#c").text("test");
+					$("#b").html("<u>test</u>");
+					
+					
+					
+				} // end func
+			); // end doc
+		</script>
+	</head>
+	<body>
+		<p id="a">Hello</p>
+		<p id="a2">Hello2</p>
+		<div id="b">World</div>
+		<span id="c">test</span>
+	</body>
+</html>

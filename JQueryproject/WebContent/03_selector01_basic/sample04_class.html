@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		/* 자바 스크립트 코드와 jquery 혼용 가능*/
+			$(document).ready( function () {
+					
+					$(".myClass").css("color", "red");
+					console.log("첫번째 myClass>>", $(".myClass"));
+					console.log("첫번째 myClass>>", $(".myClass").first().text());
+					console.log("첫번째 myClass>>", $(".myClass")[0].innerText);
+					console.log("두번째 myClass>>", $(".myClass").last().text());
+					
+					
+				} // end func
+			); // end doc
+		</script>
+	</head>
+	<body>
+		<p class="notMe">div class="notMe"</p>
+		<p class="myClass">p class="myClass1"</p>
+		<div class="myClass">div class="myClass2"</div>
+		<div class="myClass">div class="myClass3"</div>
+	</body>
+</html>
