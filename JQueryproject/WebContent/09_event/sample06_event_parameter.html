@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			$("#a").on("click", {foo:"test", test:"abc"}, function(event) {
+				console.log(event.data.foo);	// 이벤트를 통한 data객체로 전달됨
+				console.log(event.data.test);	// 이벤트를 통한 data객체로 전달됨
+			}); 
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<button id="a">ok</button>
+	</body>
+</html>

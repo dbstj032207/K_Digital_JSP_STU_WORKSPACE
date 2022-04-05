@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			$("button").on("click", function() {
+				//$(".my").append($("<span>장군</span>"));
+				//$("<span>장군</span>").appendTo($(".my"));
+				$(".my").append($("h1"));
+			});
+
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>영웅들</h1>
+		<div>
+			<div class="my">홍길동</div>
+			<div class="my">이순신</div>
+		</div>
+		<button>ok</button>
+
+	</body>
+</html>

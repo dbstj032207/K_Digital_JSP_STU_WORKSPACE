@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+			var x = $("li").is(function(idx, ele) {
+				console.log(idx, ele.innerText);
+				return ele.innerText == "A8";
+			});
+			
+			var fnx = $("li").is(function(idx, ele) {
+				var fnele = $(ele);
+				console.log(fnele);
+				return fnele.text() == "A8";
+			});
+			console.log(x);
+			console.log(fnx);
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<p>Hello</p>
+		<ul>
+		 <li>A1</li>
+		 <li>A2</li>
+		 <li class="my">A3</li>
+		 <li>A4</li>
+		 <li>A5</li>
+		 <li id="a">A6</li>
+		 <li>A7</li>
+		 <li>A8</li>
+		</ul>
+
+	</body>
+</html>

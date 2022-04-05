@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			.highlight{
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			$("p").on("click", function() {
+				//css주의
+				console.log("!!!!!!!!!!!!!"); 
+				$(this).toggleClass("highlight");	// css에 클래스 제작
+			});
+
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<p class="highlight">홍길동</p>
+		<p>이순신</p>
+		<p>유관순</p>
+	</body>
+</html>

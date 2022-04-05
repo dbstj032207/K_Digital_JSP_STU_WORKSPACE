@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			$("#myForm1").on("submit", function() {
+				console.log("submit===========");
+				event.preventDefault();
+			}); 
+ 			
+ 			$("#b").on("click", function() {
+				$("#myForm2").attr("action", "target_1.html");
+				console.log("submit 실행됨");
+			}); 
+ 			
+ 			$("#c").on("click", function() {
+				$("#myForm2").attr("action", "target_1.html");
+				$("#myForm2").submit();
+				console.log("submit 실행됨");
+			}); 
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<form id="myForm1" action="target.html">
+			<input type="text" name="userid">
+			<button id="a">a</button> <br>
+			<input type="submit" value="전송">
+		</form>
+		<hr>
+		<form id="myForm2" action="#">
+			<input type="text" name="userid">
+			<button id="b">b</button> <br>
+		</form>
+		
+		<button id="c">c</button> <br>
+	</body>
+</html>

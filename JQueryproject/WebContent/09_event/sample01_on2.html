@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			$("#a").on("click mouseover", function() {
+				console.log("ok button");
+				console.log("ok button", event.screenX, event.screenY);
+				
+				$("#result").text(event.screenX);
+			}); 
+ 			
+ 			$("#b").on("click", function() {
+				$("#a").off("click mouseover");
+			}); 
+
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<button id="a">ok</button>
+		<button id="b">ok2</button>
+	</body>
+</html>

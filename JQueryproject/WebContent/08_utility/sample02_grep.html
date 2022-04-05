@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			var s = ["A","B","C","D"]; 
+			
+			//:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+			//결과를 리턴함
+			var arr = $.grep(s, function(data, idx) {	// 주의: 순서가 다름
+				return data == "B";	// B제외 리턴
+			}, true);
+			
+			console.log(arr);
+			
+			var arr2 = $.grep(s, function(data, idx) {	// 주의: 순서가 다름
+				return data == "B";	// B만 리턴
+			}, false);
+			
+			console.log(arr2);
+			
+			var arr3 = $.grep(s, function(data, idx) {	// 주의: 순서가 다름
+				return data == "B";	// B만 리턴
+			});	// 기본값은 false
+			
+			console.log(arr3);
+			
+			
+
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

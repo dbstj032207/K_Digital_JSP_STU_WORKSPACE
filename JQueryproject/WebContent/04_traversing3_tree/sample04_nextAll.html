@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			// 선택요소의 selector와 일치하는 모든 형제 요소(0개 이상)
+			// selector가 없는 경우 다음 형제 모두 반환
+			$("div").nextAll().css("color", "red");
+			$("div").nextAll(".my").css("font-size", "40px");
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<div>A</div>
+		<p>A2</p>
+		<div>B</div>
+		<p class="my">B2</p>
+		<div>C</div>
+		<div class="my">C2</div>
+		<p>C3</p>
+	</body>
+</html>

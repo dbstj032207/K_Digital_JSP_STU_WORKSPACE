@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			$("#a").on("click mouseover", function() {
+				console.log("ok");
+			}); 
+ 			
+ 			$("#b").on("click", function() {
+ 				console.log("trigger버튼 클릭");
+				$("#a").trigger("click");	// 다른 이벤트를 강제 실행함
+			}); 
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<button id="a">ok</button>
+ 		<button id="b">ok-trigger</button>
+	</body>
+</html>

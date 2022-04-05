@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			
+			console.log($("input"));
+			$("input").on("select", function () {
+				console.log("이벤트발생");
+				$("div").text("......selected").show().fadeOut(2000);
+			})
+			
+
+		}); // end doc
+			
+
+		
+		</script>
+	</head>
+	<body>
+		<p>select 실습 </p>
+		<input type="text" value="아이템 1 아이템2">
+		<div></div>
+	</body>
+</html>

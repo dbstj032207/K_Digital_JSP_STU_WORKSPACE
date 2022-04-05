@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			var s= ["A","B", "C", "D", "E"];
+			for (var i = 0; i < s.length; i++) {
+				console.log("data>>>", s[i]);
+			}
+			
+			console.log("===========");
+			
+			$.each(s, function(idx, data) {
+				console.log(idx, data);
+			});
+			
+			console.log("===========");
+			
+			$(s).each(function(idx, data) {
+				console.log(idx, data);
+			});
+			
+			console.log("===========");
+			
+			//Json
+			var s2={"one":100, "two":200, "three": 300};
+			$.each(s2, function(key, data) {
+				console.log(key, data);
+			});
+
+			console.log("===========");
+			
+			var s3=["A","B", "C", "D", "E"];
+			var s2={"one":100, "two":200, "three": 300};
+			$.each(s3, function(idx, data) {
+				console.log("s3>>>", idx, data);
+				return data != "C";	// return false인 경우 break기능 // c인경우 false리턴
+			});
+			
+			
+			
+
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

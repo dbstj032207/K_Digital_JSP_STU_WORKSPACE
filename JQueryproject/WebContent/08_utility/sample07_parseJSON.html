@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+			var jsonString='{"name":"홍길동", "age":20, "address":"서울"}'; //문자열
+			var jsonObj = $.parseJSON(jsonString);
+			var name = jsonObj.name;
+			var age = jsonObj.age;
+			var address = jsonObj.address;
+			$("#result").append(name + "\t" + age + "\t" + address);
+			$("#result").append("<h1>" + name + "\t" + age + "\t" + address + "<h1>");
+
+		}); // end doc
+
+		</script>
+	</head>
+	<body>
+		<p id="result">
+	</body>
+</html>

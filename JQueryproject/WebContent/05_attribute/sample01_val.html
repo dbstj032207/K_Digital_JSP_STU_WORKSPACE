@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			$("button").on("click", function() {
+				var userid = $("#userid").val();
+				var passwd = $("#passwd").val();
+				console.log(userid, passwd);
+				$("#passwd2").val(passwd);
+				console.log($("#selTest").val());
+			});
+			
+			$("#selTest").on("change", function() {
+				console.log($("#selTest").val());
+			});
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<select id="selTest">
+			<option value="aaaa">aaa</option>
+			<option value="bbb">bbbb</option>
+		</select><br>
+		아이디:<input type="text" name="userid" id="userid" value="아이디입력">
+		<br> 
+		비번:<input type="text" name="passwd" id="passwd" value="비번입력"><br>
+		<input type="text" name="passwd" id="passwd2">
+		<br>
+		<button>OK</button>
+
+	</body>
+</html>

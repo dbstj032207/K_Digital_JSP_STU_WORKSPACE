@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			$("button").on("click", function() {
+				var img = $("img");
+				var data = $("img").attr("src");
+				console.log(img);
+				console.log(data);
+				img.attr("src", "b.jpg");
+			});
+
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<img src="a.jpg" width="100" height="100">
+		<button>OK</button>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			
+			console.log($("li").get(0));	// 태그
+			console.log($("li").eq(0));		// fn
+
+			console.log($("li").get(0).innerText);
+			
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+		   <li>100</li>
+		   <li>200</li>
+		   <li>300</li>
+		   <li>400</li>
+		</ul>
+		<span id="result"></span>
+	</body>
+</html>

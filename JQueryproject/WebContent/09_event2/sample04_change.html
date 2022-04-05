@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			
+			$("#sweets").change(function() {
+				var data = $(this).val();
+				$("#result").text(data);
+			})
+			
+			
+
+		}); // end doc
+			
+
+		
+		</script>
+	</head>
+	<body>
+		<form >
+			<select id="sweets">
+			<option value="aa" selected="selected">사탕</option>
+			<option value="bb" >아이스크림</option>
+			<option value="cc" >쿠키</option>
+			</select>
+		</form>
+<div id="result"></div>
+
+	</body>
+</html>

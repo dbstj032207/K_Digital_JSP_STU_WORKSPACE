@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+			// 현재 요소시작하여 selector와 일치하는 요소를 찾을 때까지 조상으로 이동(일치하는 조상 한개)
+			// 0개 또는 1개의 요소 반환
+			$("span").closest("div").css("color", "red");
+			// 현재요소의 부모요소에서 시작, 루트요소까지 상위의 요소를 모두 담음, 0개 이상의 요소
+			$("span").parents("div").css("font-size", "40px");
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<div>start
+			<div>
+				A
+				<div>
+					B
+					<p>
+						<span>C</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

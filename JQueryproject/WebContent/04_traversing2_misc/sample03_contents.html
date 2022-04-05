@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () { // 1차 선택 후 2차 선택 후 contents() 사용 text를 포함한 자식요소 반환
+			// filter및find와 주로 사용
+			$("li").find("ul").contents().css("color", "red");
+		}); // end doc
+			
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>A</li>
+			<li>A2</li>
+			<li>A3
+				<ul>
+					<li>B</li>
+					<li>B2</li>
+					<li>B3</li>
+				</ul>
+			</li>
+			<li>A4</li>
+		</ul>
+	</body>
+</html>

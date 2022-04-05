@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			
+			$("#target").on("focus", function() {
+				console.log("target focus =====");
+				$(this).css("background", "yellow");
+			})
+			
+			$("#target").on("blur", function() {
+				console.log("target blur =====");
+				$(this).css("background", "");
+			})
+			
+			$("#other").on("click", function() {
+				//$("#target").focus();
+				$("#target").trigger("focus");
+			})
+			
+			$("#other2").on("click", function() {
+				$("#target").blur();
+
+			})
+			
+			$("#other3").on("click", function() {
+				$("#target").off("blur focus");
+			})
+
+		}); // end doc
+			
+
+		
+		</script>
+	</head>
+	<body>
+		<form >
+		<input type="text" id="target">
+		<input type="text" >
+		</form>
+		<button id="other">focus</button>
+		<button id="other2">blur</button>
+		<button id="other3">clear</button>
+	</body>
+</html>
