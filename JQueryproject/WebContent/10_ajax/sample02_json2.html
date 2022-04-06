@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+
+ 			$("#a").click(getData); // end button
+ 			
+		}); // end doc
+			
+		function getData() {
+				
+			$.ajax({
+					
+				type:"get",	// get방식 요청
+				url: "sample02_json2.jsp",
+				dataType:"json",	// 서버에서 응답타입(받는 데이터)
+				success: function(data, status, xhr) {	
+					console.log("===");
+					console.log(data);
+					$.each(data, function(idx, data) {	// 주의
+						$("#result").append(data.username + ":" + data.age + "<br>")
+					});
+					$("#result").append("<hr>");
+					for (var i = 0; i < data.length; i++) {
+						$("#result").append(data[i].username + ":" + data[i].age + "<br>")
+					}
+				},
+				error: function(xhr, status, e) {	
+					$("#result").append(e + "<br>");
+					$("#result").append(status + "<br>");
+				}
+				
+			});// end ajax
+				
+		}// end getData
+		
+
+			
+		</script>
+	</head>
+	<body>
+		<button id="a">ajax요청</button>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			
+			$("#all").click(function() {
+				console.log(this.checked);
+				var test = this.checked;
+				$.each($(".fruit"), function(i, e) {
+					e.checked = test;
+				})
+			})
+			
+			$("#test").click(function() {
+				var data = $(".fruit");
+/* 				var mgs = "";
+				for (var i = 0; i < data.length; i++) {
+					if(data[i].checked){
+						mgs += data[i].value;
+					}
+				} */
+				var test = "";
+				$.each($(".fruit"), function(i, e) {
+					if(e.checked){
+						test += e.value;
+					}
+				})
+				
+				//$("#result").text(mgs);
+				$("#result").text(test);
+			})
+		
+		}); // end doc
+			
+
+		</script>
+	</head>
+	<body>
+		<ul>
+			<input type="checkbox" id="all"value="사과">전체 선택
+			<input type="checkbox" class="fruit" value="사과">사과
+			<input type="checkbox" class="fruit" value="배">배
+			<input type="checkbox" class="fruit" value="귤">귤
+			<button id="test">확인</button>
+			<div id="result"></div>
+		</ul>
+	</body>
+</html>

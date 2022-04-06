@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+ 			
+			$("div").click(function () {
+				console.log($(this).text());
+				$("#result").html("<h1>" + $(this).text() + "</h1>");
+			})
+
+		}); // end doc
+			
+
+		</script>
+	</head>
+	<body>
+		<div>홍길동</div>
+		<div>이순신</div>
+		<div>유관순</div>
+		<span id="result"></span>
+
+	</body>
+</html>

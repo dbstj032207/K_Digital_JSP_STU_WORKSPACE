@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+
+ 			$("#a").click(getData); // end button
+ 			
+		}); // end doc
+			
+		function getData() {
+				
+			$.ajax({
+					
+				type:"get",	// get방식 요청
+				url: "sample01_text.jsp",
+				dataType:"text",	// 서버에서 응답타입(받는 데이터)
+				success: function(data, status, xhr) {	// 데이터를 서버에서 받은 경우 status = 200
+				// 수신 성공시 처리 코드 작성(data: 서버에서 받은 데이터, status: 상태코드, xhr: XMLHttpRequest)
+					console.log("success실행됨 ======= ")
+					$("#result").text(data);
+				},
+				error: function(xhr, status, e) {	// 수신 불가 status 404, 403, 500, ... 시 실행
+					console.log("error", e);
+					$("#result").text("데이터를 가져올 수 없습니다.");	
+					//console.log("status", status);
+				}
+				
+			});// end ajax
+				
+		}// end getData
+			
+		</script>
+	</head>
+	<body>
+		<button id="a">ajax요청</button>
+		<div id="result"></div>
+	</body>
+</html>

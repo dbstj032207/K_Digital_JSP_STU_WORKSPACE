@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+		$(function () {
+
+ 			$("#a").click(setData); // end button
+ 			
+		}); // end doc
+			
+		function setData() {
+				
+			$.ajax({
+					
+				type:"get",	// get방식 요청
+				url: "sample01_text2.jsp",
+				data: {	// 사용자가 서버에 전달할 데이터
+					v1: $("#v1").val(),	// data전송 {v1:'1', v2:'2'}
+					v2: $("#v2").val()
+				},
+				dataType:"text",	// 서버에서 응답타입(받는 데이터)
+				success: function(data, status, xhr) {	
+					console.log("success", data);
+					$("#result").text(data);
+				},
+				error: function(xhr, status, e) {	
+					$("#result").append("데이터 받지 못함");
+					$("#result").append(status);
+				}
+				
+			});// end ajax
+				
+		}// end setData
+			
+		</script>
+	</head>
+	<body>
+		<button id="a">ajax요청</button><br>
+		v1:<input type="text" name="v1" id="v1"><br>
+		v2:<input type="text" name="v2" id="v2"><br>
+		<div id="result"></div>
+	</body>
+</html>
