@@ -9,10 +9,20 @@
 
     
     $(document).ready(function() {
-	 	/*
-	  코드 구현
-	
-	*/
+		$("form").on("submit", function() {
+			
+			if($("#userid").val().length == 0){
+	    		alert("아이디값을 입력하시오");
+	    		$("#userid").focus(); 
+	    		return false;
+	    	}
+	    	if($("#passwd").length == 0){  
+	    		alert("비밀번호값을 입력하시오");
+	    		$("#passwd").focus();
+	    		return false;
+	    	}
+
+		});
 	});
 </script>
 </head>

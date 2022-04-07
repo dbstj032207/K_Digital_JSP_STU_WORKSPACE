@@ -8,11 +8,11 @@
 <script type="text/javascript">
 
 
-  $(document).ready(function() {
-	 	/*
-	  코드 구현
-	
-	*/
+  	$(document).ready(function() {
+		
+  		$("select").change(function() {
+  			$("#result").css("font-size", $(this).val());
+		})
 	});
 </script>
 </head>

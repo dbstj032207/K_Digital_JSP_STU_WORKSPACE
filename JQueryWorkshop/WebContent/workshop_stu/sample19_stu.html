@@ -9,11 +9,29 @@
 
    
    var arr = [];  
-    $(document).ready(function() {
-	 	/*
-	   코드 구현
 
-	 */
+   function list(){
+	   var result = $("#result");
+	   var mesg = '';
+	   $.each(arr,function(idx,ele){
+		   mesg = mesg + arr[idx]+"<br>";
+	   });
+	   result.html(mesg);
+   }
+   
+   function save(){
+	   var v1 = $("#v1");
+	   arr.push(v1.val());
+	   list();
+   }
+   
+   
+   $(document).ready(function() {
+		$("#v1").on("keyup", function() {
+			if(event.keyCode == 13){
+				   save();
+			   }
+		});
   });
 </script>
 </head>

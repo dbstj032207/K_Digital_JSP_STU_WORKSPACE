@@ -7,10 +7,44 @@
 <script type="text/javascript">
    
     $(document).ready(function(){
-     /*
- 	   코드 구현
+    	$("#xxx").on("click",function(event){
 
- 	  */
+        	$.ajax({
+        		type:"get",
+        		url:"broadcast.jsp",
+        		dataType:"xml",
+        		success:function(responseData, status, xhr){    	
+
+					 var mesg = "<table border='1'>";
+					 	 mesg += "<tr>";
+					 	 mesg += "<th>term</th>";
+					 	 mesg += "<th>part</th>";
+					 	 mesg += "<th>mes</th>";
+					 	 mesg += "</tr>";
+					 $(responseData).find("entry").each(function(){
+						 console.log($(this));
+						 var term= $(this).attr("term");
+						 var part = $(this).attr("part");
+						 var mes = $(this).children("mes");
+						 mesg += "<tr>";
+					 	 mesg += "<td>"+term+"</td>";
+					 	 mesg += "<td>"+part+"</td>";
+					 	 mesg += "<td>"+mes.text()+"</td>";
+					 	 mesg += "</tr>";
+					 
+					 });
+					 
+					    mesg +="</table>";
+					$("#result").html(mesg);    
+        		},
+        		error:function(xhr,status,e){
+        			console.log(status, e);
+        		}
+        		
+        	});
+        	
+        	
+        });
     });
     
 

@@ -8,10 +8,14 @@
 
     $(document).ready(function() {
         
-    	/*
-		  코드 구현
-		
-		*/
+    	$("#passwd1").keyup(function() {
+			var passwd = $("#passwd").val();
+			if(passwd != $(this).val()){
+				$("#result").text("비밀번호 불일치");
+			}else{
+				$("#result").text("비밀번호 일치");
+			}
+		})
   	   
   	});
 </script>

@@ -9,10 +9,19 @@
 
    var arr = [];  
    $(document).ready(function() {
-	 	/*
-	   코드 구현
-
-	 */
+	 	$("button").click(function() {
+	 		arr.push($("#v1").val());
+			list();
+		})
+		
+		function list() {
+	 		var result = $("#result");
+	 	   	var mesg = '';
+	 	   	$.each(arr,function(idx,ele){
+	 		   	mesg = mesg + arr[idx]+"<br>";
+	 	   	});
+	 	   	result.html(mesg);
+		}
    });
    
 </script>

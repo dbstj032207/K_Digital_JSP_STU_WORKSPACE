@@ -8,10 +8,15 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
- 	/*
-	   코드 구현
-
-	 */
+	$(document).ready(function() {
+		var sum = 0;
+		  $("button").on("click",function(){
+			  $("li").each(function(idx,ele){
+					sum += parseInt($(ele).text());
+				})
+				$("#result").text(sum);
+		  });
+	});
 });
 </script>
 </head>

@@ -7,12 +7,12 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-   $(document).ready(function() {
-	 	/*
-	   코드 구현
-
-	 */
-   });
+	$(document).ready(function() {
+		var childWin;
+		$("button").on("click", function(e) {
+			childWin = window.open("childWin3.html","","width=400,height=400");
+		});
+	});
 
 </script>
 </head>

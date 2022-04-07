@@ -8,10 +8,20 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-	 	/*
-	  코드 구현
-	
-	*/
+		$("form").on("submit", function() {
+			
+			if($("#userid").val().length == 0){
+				$("#idSpan").text("아이디값을 입력하시오"); 
+	    		$("#userid").focus(); 
+	    		event.preventDefault();
+	    	}
+	    	if($("#passwd").val().length == 0){  
+	    		$("#pwSpan").text("비밀번호값을 입력하시오"); 
+	    		$("#passwd").focus();
+	    		event.preventDefault();
+	    	}
+
+		});
 	});
 </script>
 </head>

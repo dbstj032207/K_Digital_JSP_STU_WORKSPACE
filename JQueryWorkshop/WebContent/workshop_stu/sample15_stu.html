@@ -8,12 +8,21 @@
 <script type="text/javascript">
 
   
-   $(document).ready(function() {
-	   
-	 	/*
-	  코드 구현
+	$(document).ready(function() {
+		var childwin;
+		$("#one").on("click", function(e) {
+			var popupX = (window.screen.width / 2) - (200 / 2);
+			var popupY= (window.screen.height / 2) - (300 / 2);
+			childWin = window.open("childWin.html","",
+					"'status=no, height=300, width=200, left='+ popupX + ', top='+ popupY");
+		});
+		$("#two").on("click", function(e) {
+			childWin.close();
+		});
+		$("#three").on("click", function(e) {
+			window.close();
+		});
 	
-	*/
 	});
 </script>
 </head>

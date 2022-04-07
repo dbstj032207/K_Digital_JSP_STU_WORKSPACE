@@ -8,11 +8,15 @@
 <script type="text/javascript">
   $(document).ready(function() {
 
-	 	/*
-	   코드 구현
-
-	 */
-  });
+	  	$("#x").on("click",function(){
+		  	$("#result").text($("input").val().length);
+	  	});
+	  
+	  	$("input").on("keyup" , function(e){
+			$("#x").trigger("click"); 
+		});
+	  
+  	});
 </script>
 </head>
 <body>

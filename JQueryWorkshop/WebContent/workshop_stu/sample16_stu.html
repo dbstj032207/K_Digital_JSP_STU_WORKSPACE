@@ -9,12 +9,12 @@
 
 
 
-$(document).ready(function() {
- 	/*
-  코드 구현
-
-*/
-});
+	$(document).ready(function() {
+		var childwin;
+		$("button").click(function(e) {
+			childWin = window.open("childWin2.html","", "width=200, height=200");
+		});
+	});
 </script>
 </head>
 <body>
